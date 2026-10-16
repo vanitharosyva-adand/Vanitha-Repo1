@@ -56,3 +56,48 @@ print(f"Test for islower string: {test_str.islower()}") #checks if all character
 print( f"Test for isupper string: {test_str.isupper()}") #checks if all characters in a string are uppercase.
 print(f"Test for istitle string: {test_str.istitle()}") #checks if a string is in title case (first letter of each word is uppercase).
 print(f"Test for isspace string: {test_str.isspace()}") #checks if all characters in a string are whitespace.
+
+
+
+
+
+
+"""
+#-----------------OUTPUT------------------------------
+Hello Vanitha
+Enter the string: This is the test for the string methods
+Test for caps string: THIS IS THE TEST FOR THE STRING METHODS
+Test for lowercase string: this is the test for the string methods
+Test for title string: This Is The Test For The String Methods
+Test for title string: This is the test for the string methods
+Test for find string: 8
+Test for count string: 2
+Test for replace string: This is THE test for THE string methods
+Test for split string: ['This', 'is', 'the', 'test', 'for', 'the', 'string', 'methods']
+Test for strip string: This is the test for the string methods
+Test for isalpha string: False
+Test for isdigit string: False
+Test for isspace string: False
+Test for startswith string: False
+Test for endswith string: False
+Test for join string: T-h-i-s- -i-s- -t-h-e- -t-e-s-t- -f-o-r- -t-h-e- -s-t-r-i-n-g- -m-e-t-h-o-d-s
+Test for len string: 39
+Test for index string: 8
+Test for isalnum string: False
+Test for swapcase string: tHIS IS THE TEST FOR THE STRING METHODS
+Test for zfill string: 00000000000000000000000000000000000000000This is the test for the string methods
+Test for center string: ********************This is the test for the string methods*********************
+Test for lstrip string: This is the test for the string methods
+Test for rstrip string: This is the test for the string methods
+Test for partition string: ('This is ', 'the', ' test for the string methods')
+Test for rpartition string: ('This is the test for ', 'the', ' string methods')
+Test for expandtabs string: This is the test for the string methods
+Test for isdecimal string: False
+Test for isidentifier string: False
+Test for isprintable string: True
+Test for islower string: False
+Test for isupper string: False
+Test for istitle string: False
+Test for isspace string: False
+#-------------------------------------------------------------------------------------------------------------
+"""
