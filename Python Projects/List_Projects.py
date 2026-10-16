@@ -1,12 +1,15 @@
-#List Practice. 17:17
+#List Practice. 
 
 #Method1 to take input as list
 num_list = input("Enter the list of numbers: ").split()
 print(num_list)
+print(f"Type of num_list: {type(num_list)}")
+
 
 #Method2 to take input as list withput spaces eg:1234 = [1,2,3,4]
 num_list2 = list(input("ENter the number: "))
 print(num_list2)
+print(f"Type of num_list2: {type(num_list2)}")
 
 #-------------------------
 list2 = []
@@ -28,7 +31,7 @@ print(f"Test for remove list: {num_list.remove('5')} {num_list}") #removes the f
 print(f"Test for pop list: {num_list.pop()} {num_list}") #removes and returns  the last element of a list.
 print(f"Test for index list: {num_list.index('3')}") #returns the   index of the first occurrence of a specified element in a list.
 print(f"Test for count list: {num_list.count('3')}") #counts the number of occurrences of a specified element in a list.
-print(f"Test for clear list: {num_list.clear()}") #removes all elements from a list.
+
 print(f"Test for copy list: {num_list.copy()}") #creates a shallow copy of a list.  
 print(f"Test for len list: {len(num_list)}") #returns the number of elements in a list. 
 print(f"Test for max list: {max(num_list)}") #returns the maximum value from a list.
@@ -54,4 +57,84 @@ print(f"Test for list slicing with negative step and start and end index and ste
 print(f"Test for list slicing with negative step and start and end index and step and negative step: {num_list[3:1:-2]}") #returns a new list containing the elements of a list in reverse order, starting and ending at specified indices, with a specified step value.    
 print(f"Test for list slicing with negative step and start and end index and step and negative step and start index: {num_list[3:1:-2]}") #returns a new list containing the elements of a list in reverse order, starting and ending at specified indices, with a specified step value.    
 print(f"Test for list slicing with negative step and start and end index and step and negative step and start index and end index: {num_list[3:1:-2]}") #returns a new list containing the elements of a list in reverse order, starting and ending at specified indices, with a specified step value.  
+print(f"Test for clear list: {num_list2.clear()}") #removes all elements from a list.
 
+
+#------------------------------------/
+#Take a list of numbers from the user and print the sum.
+num_list3 = input("Enter the list elements separated by space: ").split()
+total = sum(int(x) for x in num_list3)
+print(f"The sum of the numbers is: {total}")
+#------------------------------------/
+#List sorting: Take a list of numbers from the user and print the sorted list.
+sorted_list = sorted(num_list3)
+print(f"The sorted list is: {sorted_list}")
+#------------------------------------/
+#List Reverse
+reversed_list = list(reversed(num_list))
+print(f"Reversed list is: {reversed_list}")
+#----------------------------------------/
+#List slicing: Take a list of numbers from the user and print the sliced list.
+new2 = num_list[::-1]
+print(f"new2 content is: {new2}")
+#-----------------------------------
+max_num = max(num_list)
+print(f"Max of {num_list} is = {max_num}")
+#-----------------------------------
+#--Odd or even 
+print(["even" if int(x) % 2 == 0 else "Odd" for x in num_list])
+
+
+
+"""
+#---------------------OUTPUT-----------------------
+Enter the list of numbers: 1 2 5 4 3
+['1', '2', '5', '4', '3']
+Type of num_list: <class 'list'>
+ENter the number: 54351
+['5', '4', '3', '5', '1']
+Type of num_list2: <class 'list'>
+['2', '3', '6']
+Test for sort list: ['1', '2', '3', '4', '5']
+Test for reverse list: ['3', '4', '5', '2', '1']
+Test for append list: None ['1', '2', '5', '4', '3', '5']
+Test for extend list: None ['1', '2', '5', '4', '3', '5', '6', '7']
+Test for insert list: None ['1', '2', '8', '5', '4', '3', '5', '6', '7']
+Test for remove list: None ['1', '2', '8', '4', '3', '5', '6', '7']
+Test for pop list: 7 ['1', '2', '8', '4', '3', '5', '6']
+Test for index list: 4
+Test for count list: 1
+Test for copy list: ['1', '2', '8', '4', '3', '5', '6']
+Test for len list: 7
+Test for max list: 8
+Test for min list: 1
+Test for sum list: 29
+Test for any list: True
+Test for all list: True
+Test for sorted list: ['1', '2', '3', '4', '5', '6', '8']
+Test for reversed list: ['6', '5', '3', '4', '8', '2', '1']
+Test for enumerate list: [(0, '1'), (1, '2'), (2, '8'), (3, '4'), (4, '3'), (5, '5'), (6, '6')]
+Test for zip list: [('1', '5'), ('2', '4'), ('8', '3'), ('4', '5'), ('3', '1')]
+Test for filter list: ['8', '4', '3', '5', '6']
+Test for map list: [2, 4, 16, 8, 6, 10, 12]
+Test for list comprehension: [1, 4, 64, 16, 9, 25, 36]
+Test for list slicing: ['2', '8', '4']
+Test for list slicing with step: ['1', '8', '3', '6']
+Test for list slicing with negative step: ['6', '5', '3', '4', '8', '2', '1']
+Test for list slicing with negative step and start index: ['4', '8', '2', '1']
+Test for list slicing with negative step and end index: ['6', '5']
+Test for list slicing with negative step and start and end index: ['4', '8']
+Test for list slicing with negative step and start and end index and step: ['4']
+Test for list slicing with negative step and start and end index and step and negative step: ['4']
+Test for list slicing with negative step and start and end index and step and negative step and start index: ['4']
+Test for list slicing with negative step and start and end index and step and negative step and start index and end index: ['4']
+Test for clear list: None
+Enter the list elements separated by space: 1 4 3 2
+The sum of the numbers is: 10
+The sorted list is: ['1', '2', '3', '4']
+Reversed list is: ['6', '5', '3', '4', '8', '2', '1']
+new2 content is: ['6', '5', '3', '4', '8', '2', '1']
+Max of ['1', '2', '8', '4', '3', '5', '6'] is = 8
+['Odd', 'even', 'even', 'even', 'Odd', 'Odd', 'even']
+#------------------------------------------------------------------
+"""
